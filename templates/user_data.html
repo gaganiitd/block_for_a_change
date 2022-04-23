@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+div.a {
+  font-family: Ubuntu-Bold;
+  font-size: 16px;
+  color: #FFFFFF;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+tr, td {
+  text-align: left;
+  padding: 8px;
+}
+tr {
+  background-color: #827ffe;
+  color: white;
+}
+</style>
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-t-50 p-b-90">
+					<span class="login100-form-title p-b-51">
+						User Identity
+					</span>
+				<div class="a">
+
+				<table border=2>
+	    {% for key in message %}
+    	  <tr>
+        	<td>
+          	<p>{{ key }}</p>
+        	</td>
+        	<td>
+          	<p>{{ message[key] }}</p>
+       	 	</td>
+		  </tr>
+    	{% endfor %}
+</table>
+				</div>
+					<div class="container-login100-form-btn m-t-17">
+						<button class="login100-form-btn">
+							<a class="login100-form-btn" href="{{ url_for('index')}}">Back</a>
+						</button>
+					</div>
+					<div class="container-login100-form-btn m-t-17">
+						<button class="login100-form-btn">
+							<a class="login100-form-btn" href="{{ url_for('logout')}}">Logout</a>
+						</button>	
+					</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

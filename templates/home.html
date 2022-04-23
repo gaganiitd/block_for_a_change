@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-t-50 p-b-90">
+				<span class="login100-form-title p-b-51">
+					Welcome!!<br>
+				</span>
+              <form class="login100-form validate-form flex-sb flex-w" method="POST" action="/add">
+					<span class="login100-form-title p-b-51">
+						ADD USER
+					</span>
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Name is required">
+						<input class="input100" type="text" name="name" placeholder="Name">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Email number is required">
+						<input class="input100" type="text" name="email" placeholder="Email">
+						<span class="focus-input100"></span>
+					</div>
+                <div class="wrap-input100 validate-input m-b-16" data-validate = "Addressis required">
+						<input class="input100" type="text" name="address" placeholder="Address">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="container-login100-form-btn m-t-17">
+						<button class="login100-form-btn">
+							Add
+						</button>
+					</div>
+				</form>
+				<div class="container-login100-form-btn m-t-17">
+					<button class="login100-form-btn">
+						<a class="login100-form-btn" href="/scan">Scan</a>
+					</button>
+				</div>
+				<div class="container-login100-form-btn m-t-17">
+					<button class="login100-form-btn">
+						<a class="login100-form-btn" href="/logout">Logout</a>
+					</button>
+				</div>
+			</div>
+		</div>
+{% endblock %}
